@@ -1,6 +1,5 @@
 # Microservices
 
----
 
 ## Project description
 
@@ -8,7 +7,6 @@
 
 Create a simple microservice application that simulates the operation of an online store. Users can register view products and make purchases. Each service is responsible for its own part of the functionality.
 
----
 
 ### Logic:
 
@@ -18,11 +16,10 @@ Create a simple microservice application that simulates the operation of an onli
    - Product Service sends order to **RabbitMQ**.
    - Payment Service processes the order and updates the payment status.
 
----
 
 ## Structure
 
-```http request
+```
 microservices/
 ├── auth/                     # Auth Service (FastAPI)
 │   ├── app/                  # Main code
