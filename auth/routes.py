@@ -39,3 +39,5 @@ async def login(user: UserLogin):
             {"sub": user.username})  # Refresh tokens should ideally have a different expiry
 
         return {"access_token": access_token, "refresh_token": refresh_token}
+
+# TODO: Create logout route, by blacklisting refresh token
