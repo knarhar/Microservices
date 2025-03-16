@@ -23,7 +23,7 @@ class ProductViewSet(viewsets.ModelViewSet):
             channel = connection.channel()
 
             # Ensure the queue exists (should ideally be done once at startup)
-            channel.queue_declare(queue='orders', durable=True)
+            channel.queue_declare(queue='orders', durable=False)
 
             # Convert to JSON (better practice)
             message = json.dumps({"product_id": product.id})
